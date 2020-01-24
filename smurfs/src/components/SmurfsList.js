@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SmurfsInfo from './SmurfsInfo';
 
-const SmurfsList = props => {
-    console.log('SmurfsList props', props);
+const SmurfsList = (props) => {
+    console.log('SmurfsList props is firing', props);
     return (
         <div>
             {props.smurfs.map(info => (
