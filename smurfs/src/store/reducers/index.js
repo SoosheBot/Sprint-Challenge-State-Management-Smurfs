@@ -1,5 +1,8 @@
 const initialState = {
-
+    smurfs: [],
+    isFetching: false,
+    isPosting: false,
+    error: ''
 };
 
 const rootReducer = (state = initialState, action) => {
