@@ -44,6 +44,22 @@ export const rootReducer = (state = initialState, action) => {
                 isPosting: state.isPosting,
                 error: action.payload,
             };
+            // case DELETE_SMURF:
+            //     return 
+            //         state.smurfs.filter(deleteComplete => !deleteComplete.isFetching);
+                    
+            // case DELETE_SUCCESS:
+            //     return {
+            //         isFetching: state.isFetching,
+            //         error: '',
+            //         smurfs:action.payload
+            //     };
+            // case DELETE_FAIL:
+            //     return {
+            //         ...state,
+            //         error: action.payload,
+            //         isFetching: state.isFetching
+            //     };
         default:
             return state;
     };
