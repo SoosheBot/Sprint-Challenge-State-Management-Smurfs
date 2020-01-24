@@ -1,17 +1,19 @@
 import React from 'react';
 
-const SmurfsInfo = () => {
+const SmurfsInfo = ({info}) => {
     const {
         name,
         age,
-        height
-    };
+        height,
+        id
+    } = info;
 
     return (
         <div className='add-smurf-info'>
             <h2>Name: {name}</h2>
             <h3>Age: {age}</h3>
             <h4>Height: {height}</h4>
+            <h4>ID: {id}</h4>
         </div>
     );
 };
