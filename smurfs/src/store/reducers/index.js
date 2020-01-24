@@ -10,8 +10,16 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
     switch(action.type) {
+        case START_FETCH:
+            return {
+                ...state,
+                isFetching:true,
+                error:''
+            };
         default:
             return state;
     }
 };
+
+export default rootReducer;
 
