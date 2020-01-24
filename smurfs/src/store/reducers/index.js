@@ -13,12 +13,40 @@ const rootReducer = (state = initialState, action) => {
         case START_FETCH:
             return {
                 ...state,
-                isFetching:true,
+                isFetching: !state.isFetching,
                 error:''
+            };
+        case FETCH_SUCCESS:
+            return {
+                isFetching: state.isFetching,
+                error: '',
+                smurfs:action.payload
+            };
+        case FETCH_FAIL:
+            return {
+                ...state,
+                error: action.payload,
+                isFetching: state.isFetching
+            };
+        case ADD_SMURF:
+            return {
+                ...state,
+                isPosting: state.isPosting,
+            };
+        case ADD_SUCCESS:
+            return {
+                ...state,
+                isPosting: !state.isPosting,
+            };
+        case ADD_FAIL:
+            return {
+                ...state,
+                isPosting: state.isPosting,
+                error: action.payload,
             };
         default:
             return state;
-    }
+    };
 };
 
 export default rootReducer;
